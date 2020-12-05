@@ -7,7 +7,7 @@ return(
     <div>
         {pageContext.title}
         <h1>{pageContext.publishDate}</h1>
-        {documentToReactComponents(pageContext.detail.json) }
+        {documentToReactComponents(pageContext.post.raw.json) }
     </div>
 )
 }
