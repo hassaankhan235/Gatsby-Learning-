@@ -6,14 +6,14 @@ q = faunadb.query;
 
     try{
         // Create Index in Faunadb
-        // const res = await client.query(
-        //     q.CreateIndex({
-        //         name : 'postTitles',
-        //         source: q.Collection('posts'),
-        //         terms : [{field : ['data', 'title']}]
-        //     })
-        // )
-        // console.log('Index Created' + res.name)
+        const res = await client.query(
+            q.CreateIndex({
+                name : 'postTitles',
+                source: q.Collection('posts'),
+                terms : [{field : ['data', 'title']}]
+            })
+        )
+        console.log('Index Created' + res.name)
 
         
         // Search by Index 
